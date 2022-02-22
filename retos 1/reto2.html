@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sevidores Web / Servidores de Aplicaciones</title>
+</head>
+<body>
+
+	<h1>Servidores web y soluciones de software</h1>
+
+		<p>Los servidores web sirven para almacenar contenidos de Internet y facilitar su disponibilidad de forma constante y segura.<br>
+			Cuando visitas una página web desde tu navegador, es en realidad un servidor web el que envía los componentes individuales de dicha página directamente a tu ordenador.<br>
+			Esto quiere decir que para que una página web sea accesible en cualquier momento, el servidor web debe estar permanentemente online.</p>
+
+		<p>Toda página accesible en Internet necesita un servidor especial para sus contenidos web. A menudo, las grandes empresas y organizaciones cuentan	
+			con un servidor web propio para disponer sus contenidos en Intranet e Internet. Sin embargo, la mayoría de administradores recurren a los centros de datos de proveedores de alojamiento web para sus proyectos. Independientemente de si tienes un servidor web propio o de si alquilas uno externo, siempre necesitarás un software para gestionar los datos de tu página y mantenerla actualizada. En este sentido, tienes la posibilidad de elegir entre varias soluciones de software para servidores web diseñadas para diferentes aplicaciones y sistemas operativos.</p>
+
+		<img src= "images/servidores.jpg" alt= " Servidores "/>
+
+	<h2>Índice</h2>
+
+		<ul>
+			<li><a href="#etq 1">Definición e historia</a></li>
+			<li><a href="#etq 2">La tecnología detrás de los servidores web</a></li>
+			<li><a href="#etq 3">Otras Funciones</a></li>
+			<li><a href="#etq 4">Soluciones de software libres para servidores web</a></li>
+			<li><a href="#etq 5">¿Cómo opera un servidor web?</a></li>
+		</ul>
+
+	<h2><a name="etq 1">Definición e historia</a></h2>
+
+		<p>Los servidores web (también conocidos como servidores HTTP) son un tipo de servidores utilizados para la distribución (entrega) de contenido web en redes internas o en Internet (“servidor” hace referencia al verbo “servir”). Como parte de una red de ordenadores, un servidor web transfiere documentos a los llamados clientes (del inglés clients), por ejemplo, una página web a un explorador.</p>
+		
+		<p>En general, la pregunta “qué es un servidor web” puede referirse a dos cosas: al software del servidor (es decir, al programa en sí) y al equipo en el que el software del servidor web se está ejecutando. Cuando se trata de este último, se habla del host (un host puede alojar múltiples soluciones de software para servidores web). A continuación, nos referiremos explícitamente a alguno de estos significados, ya sea al software de servidor web/software servidor HTTP (o programa) o al host.</p>
+		
+		<p>El desarrollo de los servidores web está estrechamente vinculado al físico e informático británico Tim Berners-Lee, quien en 1989 sugirió que el intercambio de información en el CERN (Organización Europea para la Investigación Nuclear) debería realizarse a través de un sistema de hipertexto más fácil y rápido. En 1990, junto con Robert Cailliau, presentó un proyecto a partir del cual y con el paso del tiempo, junto con el primer servidor web, llamado “CERN httpd”, también se creó el primer navegador web y otros elementos básicos de Internet como HTML y HTTP. Es así como Berners-Lee es hoy considerado el fundador de Internet.</p>
+
+		<img src="images/webserver.jpg" alt=" Servidor Web ">
+
+	<h2><a name="etq 2">La tecnología detrás de los servidores web</a></h2>
+
+		<p>Principalmente, el software de un servidor HTTP es el encargado de proporcionar los datos para la visualización del contenido web. Para ello, el programa se comunica con un cliente web (por lo general, un navegador o un crawler de los motores de búsqueda).</p>
+
+		<p>Para abrir una página web, el usuario solo tiene que escribir el URL correspondiente en la barra de direcciones de su navegador web. El navegador envía una solicitud al servidor web, quien responde, por ejemplo, entregando una página HTML. Esta puede estar alojada como un documentoestático en el host o ser generada de forma dinámica, lo que significa que el servidor web tiene que ejecutar un código de programa (p. ej., Java o PHP) antes de tramitar su respuesta. El navegador interpreta la respuesta, lo que suele generar automáticamente más solicitudes al servidor a propósito de, por ejemplo, imágenes integradas o archivos CSS.</p>
+
+		<p>El protocolo utilizado para la transmisión es HTTP (o su variante cifrada HTTPS), que se basa, a su vez, en los protocolos de red IP y TCP (y muy rara vez en UDP). Un servidor web puede entregar los contenidos simultáneamente a varios ordenadores o navegadores web. La cantidad de solicitudes (requests) y la velocidad con la que pueden ser procesadas depende, entre otras cosas, del hardware y la carga (número de solicitudes) del host. Sin embargo, la complejidad del contenido también juega un papel importante: los contenidos web dinámicos necesitan más recursos que los contenidos estáticos.</p>
+
+		<p>La selección del equipo adecuado para el servidor y la decisión de si este debe ser dedicado, virtual o en la nube, se debe hacer pensando siempre en evitar sobrecargas en el servidor. Recuerda que, aunque hayas encontrado un servidor web que se adapta perfectamente a las necesidades de tu proyecto, siempre se corre el riesgo de que se presenten fallos en él como consecuencia de imprecisiones técnicas o cortes de energía en el centro de datos del host. Aunque no es muy frecuente, durante un período de inactividad de este tipo (downtime), la web no estará disponible a menos que se ejecute en un dispositivo con una conexión a una Content Delivery Network, algo no muy usual en el caso de webs pequeñas.</p>
+
+	<h2><a name="etq 3">Otras Funciones</a></h2>
+
+		<p>Aunque su principal función es la transferencia de contenido web, muchos programas de servidor web ofrecen características adicionales:</p>
+
+		<dl>
+			<dt> Seguridad </dt>
+			<dd>Cifrado de la comunicación entre el servidor web y el cliente vía HTTPS</dd>
+			<dt> Autenticación del usuario </dt>
+			<dd>Autenticación HTTP para áreas específicas de una aplicación web</dd>
+			<dt> Redirección </dt>
+			<dd>Redirección de una solicitud de documento por medio de Rewrite Engine</dd>
+			<dt> Caching </dt>
+			<dd>Almacenamiento en caché de documentos dinámicos para la respuesta eficiente de solicitudes y para evitar una sobrecarga del servidor web</dd>
+			<dt> Asignación de cookies </dt>
+			<dd>Envío y procesamiento de cookies HTTP</dd>
+		</dl>
+
+		<p>Además del software del servidor, un host puede contener otro tipo de programas, como por ejemplo un servidor FTP para la carga de archivos o un servidor de base de datos para contenidos dinámicos (aunque para este propósito, cualquier host profesional ofrecerá un hardware adicional). En general, existen diferentes tipos de servidores web que pueden ser utilizados para numerosos propósitos, por ejemplo, los servidores de correo, los servidores de juegos o los servidores proxy.</p>
+
+	<h2><a name="etq 4">Soluciones de software libres para servidores web</a></h2>
+		
+		<p>La gama de programas para ejecutar un servidor web es muy amplia y algunos están disponibles de forma gratuita en Internet. La única condición es, obviamente, que el software sea compatible con el sistema operativo del host. La mayoría de los servidores web están basados en UNIX, es decir Linux, pero también se ejecutan en Windows, a excepción de Windows IIS, que solo es ejecutable en servidores Windows.<p>
+
+		<p>A continuación describimos brevemente algunos de los programas más populares para servidores web:</p>
+
+		<ul>
+			<li>Servidor Apache HTTP: el servidor web Apache se desarrolla permanentemente como un programa de código abierto disponible en numerosas versiones. Este programa modular es ejecutable en prácticamente cualquier sistema operativo y es el servidor web más utilizado. Es apropiado para contenidos web dinámicos, pues facilita la integración de lenguajes de programación como PHP y Apache puede ejecutar otros programas bajo la interfaz CGI. Para facilitar la instalación de un servidor web Apache, que puede resultar muy compleja, se pueden utilizar soluciones de software como XAMPP o LAMP, que se encargan en gran medida de su configuración. Además de Apache, estas soluciones contienen también diversos lenguajes de programación, así como el software más adecuado para la gestión de bases de datos.</li>
+
+			<li>Apache Tomcat: en este caso se trata de un servidor web de código abierto desarrollado en el entorno Java. Quien quiera crear contenidos web con Java, encontrará en Apache Tomcat la solución idónea. También es posible integrar otro servidor por medio de un conector AJP (p. ej., un servidor Apache HTTP o Microsoft IIS).</li>
+
+			<li>nginx: nginx va más allá de un tradicional servidor web de código abierto. Ofrece, entre otras cosas, un proxy inverso para reducir la carga del servidor y permitirle trabajar más rápido. En el pasado, nginx nunca dejó de ganar popularidad. Para obtener más información al respecto, visita nuestra introducción a nginx.</li>
+
+			<li>Microsoft IIS: Microsoft Internet Information Services (IIS) es un paquete de software de servidor que incluye un servidor web. En sus comienzos, IIS era una parte integral de los sistemas de Windows Server, ahora, en caso de ser necesario, es posible instalar el programa en algunos sistemas operativos Windows. Microsoft IIS solo puede ser utilizado en servidores Windows.</li>
+
+			<li>LiteSpeed Web Server: este software de servidor web para UNIX y Linux cuenta con un programa de código abierto, una versión gratuita y una versión empresarial. LiteSpeed Web Server se destaca por su alta velocidad en la transmisión de datos, especialmente en su versión para empresas.</li>
+		</ul>
+
+	<h2><a name="etq 5">¿Cómo opera un servidor web?</a></h2>
+
+		<p>Los servidores web funcionan bajo el modelo cliente-servidor. Por ejemplo, si para visitar la página de inicio de IONOS introduces el dominio “www.ionos.es” en la barra de direcciones de tu navegador, tendrá lugar el siguiente proceso:</p>
+		
+		<ul>
+			<li>Tan pronto como comienzas a escribir la dirección en la barra de direcciones, tu navegador envía la información a un servidor de nombres de dominio (también conocido como servidor DNS). Como parte fundamental del Domain Name System (DNS), el directorio central en Internet, un servidor de nombres de dominio tiene acceso a la agenda completa de direcciones en Internet. A continuación, el nombre alfanumérico del dominio (www.ionos.es) se convierte en una dirección IP numérica (217.160.72.6) y se envía de regreso al navegador.</li>
+			<li>Acto seguido, el navegador realiza una solicitud de los contenidos de la página web. Esto se hace contactando al servidor web con la dirección IP numérica obtenida en el</li>
+			<li>El servidor web responde a la petición enviando un documento de la página web solicitada al navegador. Posteriormente, el navegador envía nuevamente una solicitud al servidor web, esta vez para otro documento que también forma parte de la web solicitada. Este proceso se repite hasta que todos los elementos se han transferido y la web se muestra completamente en el navegador. Ahora bien, si haces clic en uno de los enlaces de la página de inicio de IONOS, se realizará una nueva solicitud al servidor web, iniciando nuevamente el proceso.</li>
+		</ul>

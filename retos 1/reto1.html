@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Arquitectura Cliente-Servidor</title>
+</head>
+<body>
+
+	<h1>Arquitectura Cliente-Servidor</h1>
+		<p>La arquitectura cliente-servidor es un modelo de diseño de software en el que las tareas<br> 
+		se reparten entre los proveedores de recursos o servicios, llamados servidores, y los demandantes,<br> 
+		llamados clientes. Un cliente realiza peticiones a otro programa, el servidor, quien le da respuesta.<br>
+		Esta idea también se puede aplicar a programas que se ejecutan sobre una sola computadora,<br>
+		aunque es más ventajosa en un sistema operativo multiusuario distribuido a través de una red de computadoras.</p>
+		<img src= "images/cliente_servidor.png" alt= " Arquitectura Cliente / Servidor "/>
+
+	<h2>Índice</h2>
+		<ul>
+			<li><a href="#Caracteristicas">Caracteristicas</a></li>
+			<li><a href="#Arquitecturas multi-capas">Arquitecturas multi-capas</a></li>
+			<li><a href="#Ventajas">Ventajas</a></li>
+			<li><a href="#Desventajas">Desventajas</a></li>
+			<li><a href="#Dirección">Dirección</a></li>
+			<li><a href="#Ejemplos">Ejemplos</a></li>
+			<li><a href="#Cooperación cliente-servidor">Cooperación cliente-servidor</a></li>
+			<li><a href="#Componentes básicos del modelo Cliente-Servidor">Componentes básicos del modelo Cliente-Servidor</a></li>
+			<li><a href="#Video Explicativo">Video Explicativo</a></li>
+		</ul>
+
+	<h2><a name="Caracteristicas">Caracteristicas</a></h2>
+		<p>Para la arquitectura C/S el remitente de una solicitud es conocido como cliente. Sus características son:</p>
+		<ul>
+			<li>Es quien inicia solicitudes o peticiones, tienen por tanto un papel activo en la comunicación (dispositivo maestro o amo).</li>
+			<li>Espera y recibe las respuestas del servidor.</li>
+			<li>Por lo general, puede conectarse a varios servidores a la vez.</li>
+			<li>Normalmente interactúa directamente con los usuarios finales mediante una interfaz gráfica de usuario.</li>
+		</ul>
+		<p>Al receptor de la solicitud enviada por el cliente se conoce como servidor. Sus características son:</p>
+		<ul>
+			<li>Al iniciarse esperan a que lleguen las solicitudes de los clientes, desempeñan entonces un papel pasivo en la comunicación (dispositivo esclavo).</li>
+			<li>Tras la recepción de una solicitud, la procesan y luego envían la respuesta al cliente.</li>
+			<li>Por lo general, acepta las conexiones de un gran número de clientes (en ciertos casos el número máximo de peticiones puede estar limitado).</li>
+		</ul>
+		<p>En la arquitectura C/S sus características generales son:</p>
+		<ul>
+			<li>El Cliente y el Servidor pueden actuar como una sola entidad y también pueden actuar como entidades separadas, realizando actividades o tareas independientes.</li>
+			<li>Las funciones de Cliente y Servidor pueden estar en plataformas separadas, o en la misma plataforma.</li>
+			<li>Cada plataforma puede ser escalable independientemente. Los cambios realizados en las plataformas de los Clientes o de los Servidores, ya sean por actualización o por reemplazo tecnológico, se realizan de una manera transparente para el usuario final.</li>
+			<li>La interrelación entre el hardware y el software están basados en una infraestructura poderosa, de tal forma que el acceso a los recursos de la red no muestra la complejidad de los diferentes tipos de formatos de datos y de los protocolos.</li>
+			<li>Su representación típica es un centro de trabajo (PC), en donde el usuario dispone de sus propias aplicaciones de oficina y sus propias bases de datos, sin dependencia directa del sistema central de información de la organización.</li>
+		</ul>
+		<p>Los servidores pueden ser apátridas o stateful. Un servidor apátrida no guarda ninguna información entre las peticiones. Un servidor stateful puede recordar la información entre las peticiones. El alcance de esta información puede ser global o sesión-específico. Un servidor del HTTP para las páginas estáticas del HTML es un ejemplo de un servidor, apátrida mientras que Apache Tomcat es un ejemplo de un servidor stateful.</p>
+		<p>La interacción entre el cliente y el servidor se describe a menudo usando diagramas de secuencia. Los diagramas de secuencia se estandarizan en el UML. Es importante que los clientes no interactúen entre sí ni que lo hagan clientes de capas bajas hacia otros de capas más altas, por eso todo tiene que pasar por el servidor.</p>
+		<p>Otro tipo de arquitectura de red se conoce como arquitectura del par-a-par porque cada nodo o caso del programa es un “cliente” y un “servidor” y cada uno tiene responsabilidades equivalentes. Ambas arquitecturas están en uso amplio.</p>
+
+	<h2><a name="Arquitecturas multi-capas">Arquitecturas multi-capas</a></h2>
+		<p>La arquitectura cliente/servidor genérica tiene dos tipos de nodos en la red: clientes y servidores. Consecuentemente, estas arquitecturas genéricas se refieren a veces como arquitecturas de dos niveles o dos capas.</p>
+		<p>Algunas redes disponen de tres tipos de nodos:</p>
+		<ul>
+			<li>Clientes que interactúan con los usuarios finales.</li>
+			<li>Servidores de aplicación que procesan los datos para los clientes.</li>
+			<li>Servidores de la base de datos que almacenan los datos para los servidores de aplicación.</li>
+		</ul>
+		<p>Esta configuración se llama una arquitectura de tres-capas.</p>
+		<ul>
+			<li>Ventajas de las arquitecturas n-capas:<br>La ventaja fundamental de una arquitectura n-capas comparado con una arquitectura de dos niveles (o una tres-capas con una de dos niveles) es que separa hacia fuera el proceso, eso ocurre para mejorar el balance la carga en los diversos servidores; es más escalable.</li>
+			<li>Desventajas de las arquitecturas de la n-capas:</li>
+			<ul>
+				<li>Pone más carga en la red, debido a una mayor cantidad de tráfico de la red.</li>
+				<li>Es mucho más difícil programar y probar el software que en arquitectura de dos niveles porque tienen que comunicarse más dispositivos para terminar la transacción de un usuario.</li>
+			</ul>
+		</ul>
+		<img src="images/tres_capas.png" = alt="Modelo de tres capas">
+
+	<h2><a name="Ventajas">Ventajas</a></h2>
+		<ul>
+			<li>Centralización del control: los accesos, recursos y la integridad de los datos son controlados por el servidor de forma que un programa cliente defectuoso o no autorizado no pueda dañar el sistema. Esta centralización también facilita la tarea de poner al día datos u otros recursos (mejor que en las redes P2P).</li>
+			<li>Escalabilidad: se puede aumentar la capacidad de clientes y servidores por separado. Cualquier elemento puede ser aumentado (o mejorado) en cualquier momento, o se pueden añadir nuevos nodos a la red (clientes y/o servidores).</li>
+			<li>Fácil mantenimiento: al estar distribuidas las funciones y responsabilidades entre varios ordenadores independientes, es posible reemplazar, reparar, actualizar, o incluso trasladar un servidor, mientras que sus clientes no se verán afectados por ese cambio (o se afectarán mínimamente). Esta independencia de los cambios también se conoce como encapsulación.</li>
+			<li>Existen tecnologías, suficientemente desarrolladas, diseñadas para el paradigma de C/S que aseguran la seguridad en las transacciones, la amigabilidad de la interfaz, y la facilidad de empleo.</li>
+			<li>En las redes C/S los demás clientes no tienen acceso a las IP's por lo que se dificulta el rastreo y/o hackeo de los usuarios</li>
+		</ul>
+
+	<h2><a name="Desventajas">Desventajas</a></h2>
+		<ul>
+			<li>La congestión del tráfico ha sido siempre un problema en el paradigma de C/S. Cuando una gran cantidad de clientes envían peticiones simultáneas al mismo servidor, puede ser que cause muchos problemas para este (a mayor número de clientes, más problemas para el servidor). Al contrario, en las redes P2P como cada nodo en la red hace también de servidor, cuanto más nodos hay, mejor es el ancho de banda que se tiene.</li>
+			<li>El paradigma de C/S clásico no tiene la robustez de una red P2P. Cuando un servidor está caído, las peticiones de los clientes no pueden ser satisfechas. En la mayor parte de redes P2P, los recursos están generalmente distribuidos en varios nodos de la red. Aunque algunos salgan o abandonen la descarga; otros pueden todavía acabar de descargar consiguiendo datos del resto de los nodos en la red.</li>
+			<li>El software y el hardware de un servidor son generalmente muy determinantes. Un hardware regular de un ordenador personal puede no poder servir a cierta cantidad de clientes. Normalmente se necesita software y hardware específico, sobre todo en el lado del servidor, para satisfacer el trabajo. Por supuesto, esto aumentará el coste.</li>
+			<li>El cliente no dispone de los recursos que puedan existir en el servidor. Por ejemplo, si la aplicación es una Web, no podemos escribir en el disco duro del cliente o imprimir directamente sobre las impresoras sin sacar antes la ventana previa de impresión de los navegadores.</li>
+			<li>En las redes C/S la única forma de obtener la información es a través de la que proporciona el servidor el cual los clientes no pueden compartir información entre ellos</li>
+		</ul>
+
+	<h2><a name="Dirección">Dirección</a></h2>
+		<p>Los métodos de dirección en ambientes del servidor de cliente se pueden describir como sigue:</p>
+		<ul>
+			<li>Dirección del proceso de la máquina: la dirección se divide como proceso@máquina. Por lo tanto 56@453 indicaría el proceso 56 en la computadora 453.</li>
+			<li>Servidor de nombres: los servidores de nombres tienen un índice de todos los nombres y direcciones de servidores en el dominio relevante.</li>
+			<li>Localización de Paquetes: Los mensajes de difusión se envían a todas las computadoras en el sistema distribuido para determinar la dirección de la computadora de la destinación.</li>
+			<li>Comerciante: Un comerciante es un sistema que pone en un índice todos los servicios disponibles en un sistema distribuido. Una computadora que requiere un servicio particular comprobará con el servicio que negocia para saber si existe la dirección de una computadora que proporciona tal servicio.</li>
+		</ul>
+
+	<h2><a name="Ejemplos">Ejemplos</a></h2>
+		<p>La mayoría de los servicios de Internet son tipo de cliente-servidor. La acción de visitar un sitio web requiere una arquitectura cliente-servidor, ya que el servidor web sirve las páginas web al navegador (al cliente). La computadora y el navegador web del usuario serían considerados un cliente; y las computadoras, las bases de datos, y los usos que componen Wikipedia serían considerados el servidor. Cuando el navegador web del usuario solicita un artículo particular de Wikipedia, el servidor de Wikipedia recopila toda la información a mostrar en la base de datos de Wikipedia, la articula en una página web, y la envía de nuevo al navegador web del cliente.</p>
+		<p>Otro ejemplo podría ser el funcionamiento de un juego en línea. Si existen dos servidores de juego, cuando un usuario lo descarga y lo instala en su computadora pasa a ser un cliente. Si tres personas juegan en un solo computador existirían dos servidores, un cliente y tres usuarios. Si cada usuario instala el juego en su propio ordenador existirían dos servidores, tres clientes y tres usuarios.</p>
+		<img src="images/modelo_arquitectura.png" = alt="Modelo arquitectura cliente-servidor">
+
+	<h2><a name="Cooperación cliente-servidor">Cooperación cliente-servidor</a></h2>
+		<h4>Multiple Server</h4>
+		<p>Para que un proceso se realice de la mejor manera, es preferible utilizar terminales distintos realizando la misma tarea, a centralizar los recursos y que con más hardware/software se realice la misma tarea. Con la ejecución de múltiples servidores el procesamiento es más rápido, el tiempo de respuesta es descentralizado y se incrementa la confiabilidad.</p>
+		<h4>Cooperación de procesos paralelos</h4>
+		<p>El mismo proceso se ejecuta simultáneamente (sistemas redundantes).</p>
+		<h4>Cooperación de base de datos</h4>
+		<p>Si se requiere de cierta información ya existente, por qué crearla de nuevo, simplemente interactúa y aprovecha la información ya creada.</p>
+
+	<h2><a name="Componentes básicos del modelo Cliente-Servidor">Componentes básicos del modelo Cliente-Servidor</a></h2>
+		<p>En esta aproximación, y con el objetivo de definir y delimitar el modelo de referencia de una arquitectura Cliente/Servidor, se identifican cinco componentes que permitan articular dicha arquitectura, considerando que toda aplicación de un sistema de información está caracterizada por lo siguiente:</p>
+		<ul>
+			<li>Presentación/Captación de la información.</li>
+			<li>Procesos.</li>
+			<li>Almacenamiento de la información.</li>
+			<li>Puestos de trabajo</li>
+			<li>Comunicaciones.</li>
+		</ul>
+
+	<h3><a name="Video Explicativo">Video Explicativo</a></h3>
+		<iframe width="756" height="427" src="https://www.youtube.com/embed/49zdlyLSwhQ" title="Modelo Cliente Servidor, Explicación Simple" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
